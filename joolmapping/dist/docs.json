@@ -1,0 +1,330 @@
+{
+  "api": {
+    "name": "JoolMappingPlugin",
+    "slug": "joolmappingplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => Promise<{ value: string; }>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "Promise<{ value: string; }>",
+        "tags": [],
+        "docs": "Test of Bridge between JS and Java works great.",
+        "complexTypes": [],
+        "slug": "echo"
+      },
+      {
+        "name": "logToFile",
+        "signature": "(parameter: { message: string; }) => Promise<void>",
+        "parameters": [
+          {
+            "name": "parameter",
+            "docs": "",
+            "type": "{ message: string; }"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Write Production in File.txt stored in /Documents/YouAppName",
+        "complexTypes": [],
+        "slug": "logtofile"
+      },
+      {
+        "name": "ini",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Enable USB connection between Mobile device and Drone Remote Control",
+        "complexTypes": [],
+        "slug": "ini"
+      },
+      {
+        "name": "attachBaseContext",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Initialise Drone DJI SDK and connect SDK to this Application (Done Automatically)",
+        "complexTypes": [],
+        "slug": "attachbasecontext"
+      },
+      {
+        "name": "onCreate",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Connect DJI Singleton Class to current Application Singleton Class (Done Automatically)",
+        "complexTypes": [],
+        "slug": "oncreate"
+      },
+      {
+        "name": "connect",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Connect DJI to current Drone and perform DJI Registration",
+        "complexTypes": [],
+        "slug": "connect"
+      },
+      {
+        "name": "disconnect",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Disconnect the drone currently connected to this app (not available for DJI drone at this time)",
+        "complexTypes": [],
+        "slug": "disconnect"
+      },
+      {
+        "name": "watchDroneTelemetry",
+        "signature": "(callback: WatchPositionCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "(position: CurrentDroneState | null, err?: any) => void"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "Watch Drone Telemetry information\n\nType Object: callback.position - Contain Telemetry info\n\nType number: callback.position.uplinkSignalQuality - Remote Controller Signal quality\n\nType number: callback.position.satelliteCount - Nombre de satellites utilisés pour la précision GPS\n\nType number: callback.position.chargeRemainingInPercent - Battery remaining in percent\n\nType number: [callback.position.chargeRemainingInMAh - Battery remaining in mAh\n\nType number: [callback.position.temperature - Drone temperature\n\nType number: [callback.position.altitudeInMeters - Current Drone altitude in meter\n\nType number: [callback.position.speedInMeterPerSec - Current Drone Speed in meter/sec (2 dimensions)\n\nType number: [callback.position.heading - Compass heading value is [-180 to 180] ..0 is North\n\nType number: [callback.position.droneHeadingInDegrees - Compass heading in Degree value is [0 to 360]\n\nType number: [callback.position.numberOfDischarges - number of drone battery discharges\n\nType number: [callback.position.lifetimeRemainingInPercent - Drone battery lifetime remaining in percent ..Warning if is not supported the value is always 0\n\nType number: [callback.position.longitude  - Current drone longitude, Can be null if no satellite found for precision\n\nType number: [callback.position.latitude  - Current drone latitude, Can be null if no satellite found for precision\n\nType number: [callback.position.altitude  - Current drone altitude\n\nType number: [callback.position.droneModelName  - Current drone model Name\n\nType number: callback.err - Will be not null if error happen and given more information about this error",
+        "complexTypes": [
+          "WatchPositionCallback",
+          "CallbackID"
+        ],
+        "slug": "watchdronetelemetry"
+      },
+      {
+        "name": "stopWatchDroneTelemetry",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Stop watchDroneTelemetry function and disable drone telemetry",
+        "complexTypes": [],
+        "slug": "stopwatchdronetelemetry"
+      },
+      {
+        "name": "returnToHome",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Safely go back at home",
+        "complexTypes": [],
+        "slug": "returntohome"
+      },
+      {
+        "name": "setMissionSetting",
+        "signature": "(options: MissionOptions) => Promise<void>",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "MissionOptions"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Configure new mission setting\n\nType number: options.altitude - Set Mission altitude in meter. from 50 to 100 meters\n\nType boolean: options.exitMissionOnRCLost - Cancel or Continue mission When signal lost with Drone\n\nType boolean: options.autoGoHomeOnLowBattery - Drone go back to Home When mission done\n\nType boolean: options.useSimulator - Test in Simulator\n\nType number: options.daylight - Select current daylight between 1-NORMAL, 2- NUAGEUSE, 3-ENSOLEILLEE\n\nType number: options.phoneLatitude - set Current Android phone location latitude\n\nType number: options.phoneLongitude - set Current Android phone location longitude\n\nType Object: options.polygonPoints - set GEOJSON polygon to process",
+        "complexTypes": [
+          "MissionOptions"
+        ],
+        "slug": "setmissionsetting"
+      },
+      {
+        "name": "startWaypointMission",
+        "signature": "(callback: MissionCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "(missionSettings: CurrentMissionState | null, err?: any) => void"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "Start New Mission with given Polygon\n\nType number: callback.missionState.startSucces - Give Waypoint Mission starting state : Started or Not. Type: boolean but can by null\n\nType number: callback.missionState.finishSucces - Give Waypoint Mission ending state : Finish or Error. Type: boolean but can by null\n\nType number: callback.missionState.stepLeft - Mission steps count . 1 step = 0 to 99 Waypoints. Type: number but can by null",
+        "complexTypes": [
+          "MissionCallback",
+          "CallbackID"
+        ],
+        "slug": "startwaypointmission"
+      },
+      {
+        "name": "isMissionExist",
+        "signature": "() => Promise<StoreState>",
+        "parameters": [],
+        "returns": "Promise<StoreState>",
+        "tags": [],
+        "docs": "Check if old Waypoint Mission Exist",
+        "complexTypes": [
+          "StoreState"
+        ],
+        "slug": "ismissionexist"
+      },
+      {
+        "name": "continuWaypointMission",
+        "signature": "(callback: MissionCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "(missionSettings: CurrentMissionState | null, err?: any) => void"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "Resume old mission if exist\n\nType Object: callback.isExist - Type: boolean but can by null",
+        "complexTypes": [
+          "MissionCallback",
+          "CallbackID"
+        ],
+        "slug": "continuwaypointmission"
+      },
+      {
+        "name": "cleanUserData",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "Delete old mission",
+        "complexTypes": [],
+        "slug": "cleanuserdata"
+      },
+      {
+        "name": "performChecklist",
+        "signature": "(parameter: { caseContinuMission: boolean; }, callback: CheckListCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "parameter",
+            "docs": "",
+            "type": "{ caseContinuMission: boolean; }"
+          },
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "(checkListSettings: CheckListResult | null, err?: any) => void"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "Verify settings before start Mission\n\nType boolean: callback.checkListSettings.phoneBattery - Give phone battery checking state : ok or Not. Type: boolean but can by null\n\nType boolean: callback.checkListSettings.droneBattery - Give drone battery checking state : ok or Not. Type: boolean but can by null\n\nType boolean: callback.checkListSettings.acces - Check if connection to drone RC control is ok or Not. Type: boolean but can by null\n\nType boolean: callback.checkListSettings.config - Check if drone configuration done: ok or Not. Type: boolean but can by null\n\nType boolean: callback.checkListSettings.controle - Check if can take drone control: ok or Not. Type: boolean but can by null\n\nType boolean: callback.checkListSettings.camera - Check if drone camera config is ok : ok or Not. Type: boolean but can by null\n\nType boolean: callback.checkListSettings.flyplan - Verify if drone flight path is ok and drone ready .Type: boolean but can by null\n\nType boolean: callback.checkListSettings.gps - Verify is GPS signal is enough or not Type: boolean but can by null\n\nType boolean: callback.checkListSettings.cameraCalibrated - Verify if Camera is calibrated .  Type: boolean but can by null\n\nType boolean: callback.checkListSettings.sdcard - Verify if Camera is connected and ready to use .  Type: boolean but can by null\n\nType string: callback.checkListSettings.diagnostic - Give all drone components diagnostic result .  Type: string but can by null\n\nType string: callback.checkListSettings.error - Give error detail when something wrong: string but can by null\n\nType boolean: callback.checkListSettings.checkSucces - Mean checklist done and everything is fine .Type: boolean but can by null",
+        "complexTypes": [
+          "CheckListCallback",
+          "CallbackID"
+        ],
+        "slug": "performchecklist"
+      },
+      {
+        "name": "getMissionInfo",
+        "signature": "(callback: InfoCallback) => Promise<CallbackID>",
+        "parameters": [
+          {
+            "name": "callback",
+            "docs": "",
+            "type": "(computationSettings: ComputationResult | null, err?: any) => void"
+          }
+        ],
+        "returns": "Promise<string>",
+        "tags": [],
+        "docs": "Show Mission Evaluation\n\nType number: callback.computationSettings.flyTime - Give mission duration. number but can by null\n\nType number: callback.computationSettings.imageCount - Mission image count. Type: number but can by null\n\nType number: callback.computationSettings.battery - Show how many battery required for this  mission. Type: number but can by null\n\nType boolean: callback.computationSettings.speed - Give drone speed in meter / second for this mission. Type: number but can by null\n\nType number: callback.computationSettings.speed - Give drone speed in meter / second for this mission. Type: number but can by null\n\nType number: [callback.computationSettings.gridProgressing - Asynchronous processing percent. Type: number but can by null\n\nType any: callback.computationSettings.surveyPoints - Give mission fly path polyline. Type: any but can by null\n\nType string: callback.computationSettings.error - Give error detail when something wrong: string but can by null",
+        "complexTypes": [
+          "InfoCallback",
+          "CallbackID"
+        ],
+        "slug": "getmissioninfo"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "MissionOptions",
+      "slug": "missionoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "altitude",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "exitMissionOnRCLost",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "autoGoHomeOnLowBattery",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        },
+        {
+          "name": "daylight",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "phoneLatitude",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "phoneLongitude",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "number | undefined"
+        },
+        {
+          "name": "polygonPoints",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "any"
+        }
+      ]
+    },
+    {
+      "name": "StoreState",
+      "slug": "storestate",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "isExist",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "boolean | undefined"
+        }
+      ]
+    }
+  ],
+  "enums": []
+}

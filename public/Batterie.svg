@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15">
+  <g id="Batterie" transform="translate(-197 -91)">
+    <path id="Rectangle_1129" data-name="Rectangle 1129" d="M0,0H9A0,0,0,0,1,9,0V7A2,2,0,0,1,7,9H2A2,2,0,0,1,0,7V0A0,0,0,0,1,0,0Z" transform="translate(197 97)" fill="#ade2dc"/>
+    <g id="Rectangle_1127" data-name="Rectangle 1127" transform="translate(197 94)" fill="none" stroke="#707070" stroke-width="1">
+      <rect width="9" height="12" rx="2" stroke="none"/>
+      <rect x="0.5" y="0.5" width="8" height="11" rx="1.5" fill="none"/>
+    </g>
+    <g id="Rectangle_1128" data-name="Rectangle 1128" transform="translate(198 91)" fill="none" stroke="#707070" stroke-width="1">
+      <rect width="7" height="2" rx="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="6" height="1" rx="0.5" fill="none"/>
+    </g>
+  </g>
+</svg>

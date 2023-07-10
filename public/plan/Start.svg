@@ -1,0 +1,9 @@
+<svg id="Start" xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="Ellipse_709" data-name="Ellipse 709" transform="translate(27 27)" fill="none" stroke="rgba(85,170,160,0.5)" stroke-width="1">
+    <circle cx="14" cy="14" r="14" stroke="none"/>
+    <circle cx="14" cy="14" r="13.5" fill="none"/>
+  </g>
+  <circle id="Ellipse_708" data-name="Ellipse 708" cx="41" cy="41" r="41" fill="#55aaa0"/>
+  <path id="Decoller" d="M0,0,30.064,11.923,0,24.768,5.993,11.923Z" transform="matrix(0.848, -0.53, 0.53, 0.848, 21.69, 31.198)" fill="#fff"/>
+  <text id="Décoller" transform="translate(41 64.734)" fill="#fff" font-size="10" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="-19" y="0">Décoller</tspan></text>
+</svg>

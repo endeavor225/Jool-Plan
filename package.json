@@ -1,0 +1,47 @@
+{
+  "name": "jool_plan",
+  "version": "0.0.1",
+  "description": "Plateforme de traitement de données collectées par drone",
+  "productName": "Jool Plan",
+  "author": "Abraham KONE <abraham.kone@weflyagri.com>",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@capacitor/core": "^3.4.3",
+    "@capacitor/geolocation": "^1.2.0",
+    "@quasar/extras": "^1.0.0",
+    "@turf/turf": "^6.5.0",
+    "WeflyTrackingNew": "^1.1.2",
+    "axios": "^0.21.1",
+    "blob-util": "^2.0.2",
+    "core-js": "^3.6.5",
+    "date-fns": "^2.28.0",
+    "joolmapping": "file:./joolmapping",
+    "jquery": "^3.6.0",
+    "jwt-decode": "^3.1.2",
+    "ping": "^0.4.1",
+    "quasar": "^2.0.0",
+    "vue-i18n": "^9.0.0"
+  },
+  "devDependencies": {
+    "@quasar/app": "^3.0.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}

@@ -1,0 +1,14 @@
+[
+	{
+		"pkg": "@capacitor/geolocation",
+		"classpath": "com.capacitorjs.plugins.geolocation.GeolocationPlugin"
+	},
+	{
+		"pkg": "WeflyTrackingNew",
+		"classpath": "com.wefly.tracking.MainServiceModulePlugin"
+	},
+	{
+		"pkg": "joolmapping",
+		"classpath": "com.jool.plugin.mapping.JoolMappingPlugin"
+	}
+]

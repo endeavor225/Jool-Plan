@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="Restart" transform="translate(-273 -700)">
+    <g id="Ellipse_709" data-name="Ellipse 709" transform="translate(300 727)" fill="none" stroke="rgba(85,170,160,0.5)" stroke-width="1">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="13.5" fill="none"/>
+    </g>
+    <circle id="Ellipse_708" data-name="Ellipse 708" cx="41" cy="41" r="41" transform="translate(273 700)" fill="#55aaa0"/>
+    <text id="Continuer" transform="translate(314 764.734)" fill="#fff" font-size="10" font-family="HelveticaNeue-Medium, Helvetica Neue" font-weight="500"><tspan x="-22" y="0">Continuer</tspan></text>
+    <g id="Continue">
+      <rect id="Rectangle_1147" data-name="Rectangle 1147" width="7" height="22" rx="2" transform="translate(304 721)" fill="#fff"/>
+      <rect id="Rectangle_1148" data-name="Rectangle 1148" width="7" height="22" rx="2" transform="translate(317 721)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

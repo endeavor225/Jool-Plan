@@ -1,0 +1,5 @@
+// app global css in SCSS form
+.leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(3px);
+}
